@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10172a">
+<title>PDF to Image Converter.ARnc — Private, Fast & Free</title>
+<style>
+:root{--bg:#0b1020;--panel:#121b31;--panel2:#17233d;--text:#eef3ff;--muted:#a8b5d1;--line:#2b3a5d;--a:#6d8cff;--b:#24d6bd;--danger:#ff7387;--shadow:0 20px 60px #0005}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#1d3262 0,transparent 38%),radial-gradient(ellipse at 95% 20%,#163e4b 0,transparent 30%),var(--bg);color:var(--text);font:15px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+button,input,select{font:inherit}button{cursor:pointer}.wrap{width:min(1120px,calc(100% - 32px));margin:auto}
+header{padding:22px 0}.nav{display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:19px;letter-spacing:-.4px}.logo{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--a),#9a62f6);box-shadow:0 8px 24px #6d8cff55;font-size:22px}.navlinks{display:flex;gap:22px}.navlinks a{color:var(--muted);text-decoration:none;font-size:14px}.navlinks a:hover{color:white}
+.hero{text-align:center;padding:54px 0 34px}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #3d5780;background:#172846;border-radius:999px;padding:6px 13px;color:#b9d4ff;font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase}.dot{width:7px;height:7px;background:var(--b);border-radius:50%;box-shadow:0 0 12px var(--b)}h1{font-size:clamp(35px,6vw,65px);line-height:1.06;letter-spacing:-2.6px;margin:22px auto 16px;max-width:850px}h1 span{background:linear-gradient(90deg,#8ea6ff,#54e4d0);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{color:var(--muted);font-size:17px;max-width:690px;margin:0 auto}
+.tool{background:linear-gradient(145deg,#172440,#101a30);border:1px solid #33466d;border-radius:25px;padding:25px;box-shadow:var(--shadow);max-width:900px;margin:25px auto 0}
+.drop{border:1.5px dashed #6077a7;border-radius:19px;padding:35px 18px;text-align:center;background:#0c1730;transition:.2s}.drop.drag{border-color:var(--b);background:#10313a}.uploadicon{font-size:42px;line-height:1.2}.drop h2{margin:12px 0 4px;font-size:21px}.drop p{margin:0 0 17px;color:var(--muted);font-size:14px}.primary{border:0;border-radius:12px;padding:12px 20px;color:#071225;background:linear-gradient(100deg,#8da7ff,#58e3d0);font-weight:800;box-shadow:0 8px 22px #5ddac044}.primary:disabled{opacity:.45;cursor:not-allowed}.subtle{color:var(--muted);font-size:12px;margin-top:12px}
+.settings{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:18px}.field{background:#0c1730;border:1px solid var(--line);border-radius:13px;padding:12px 14px}.field label{display:block;font-size:12px;color:var(--muted);font-weight:700;margin-bottom:5px}.field select{width:100%;border:0;outline:0;background:transparent;color:var(--text);font-weight:650}.field option{background:#17233d}.actions{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:17px;flex-wrap:wrap}.fileinfo{color:var(--muted);font-size:13px;overflow-wrap:anywhere}.status{min-height:22px;color:#a8f3e4;font-size:13px;margin-top:13px}.progress{height:7px;background:#263653;border-radius:9px;overflow:hidden;display:none;margin-top:10px}.bar{height:100%;width:0;background:linear-gradient(90deg,#7d99ff,#44dfc6);transition:width .2s}
+.results{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:14px;margin-top:20px}.thumb{border:1px solid var(--line);background:#0c1730;border-radius:13px;padding:10px;min-width:0}.thumb img{width:100%;height:155px;object-fit:contain;background:#fff;border-radius:8px}.thumb .name{font-size:12px;color:var(--muted);margin:8px 0;overflow-wrap:anywhere}.download{display:block;text-align:center;text-decoration:none;color:#cfe0ff;border:1px solid #3a4d73;border-radius:8px;padding:6px;font-size:12px}.download:hover{background:#213354}
+.section{padding:60px 0 10px}.section h2{text-align:center;font-size:clamp(25px,4vw,36px);letter-spacing:-.8px;margin:0 0 10px}.lead{text-align:center;color:var(--muted);max-width:720px;margin:0 auto 27px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:#121d34;border:1px solid var(--line);border-radius:17px;padding:21px}.card .emoji{font-size:25px}.card h3{margin:8px 0 5px;font-size:17px}.card p{margin:0;color:var(--muted);font-size:14px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.step{padding:20px;border-radius:16px;background:#111c32;border:1px solid var(--line)}.num{color:#8faaff;font-weight:900;font-size:13px}.step h3{margin:5px 0}.step p{margin:0;color:var(--muted);font-size:14px}
+.prose{max-width:850px;margin:0 auto;color:#c1cce2}.prose h3{color:var(--text);margin:24px 0 7px}.prose p{margin:0 0 13px}.notice{border-left:3px solid var(--b);background:#102a32;padding:13px 16px;border-radius:0 10px 10px 0;color:#c7eee8}
+footer{margin-top:65px;border-top:1px solid var(--line);padding:25px 0 35px;color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:700px){.navlinks{display:none}.hero{padding-top:32px}h1{letter-spacing:-1.5px}.tool{padding:13px;border-radius:19px}.drop{padding:27px 12px}.settings,.cards,.steps{grid-template-columns:1fr}.actions{align-items:stretch}.actions .primary{width:100%}.section{padding-top:45px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><div class="brand"><div class="logo">▧</div>PixelPDF <span style="color:#7e9aff">Converter</span></div><nav class="navlinks"><a href="#features">Features</a><a href="#how">How it works</a><a href="#privacy">Privacy</a></nav></div></header>
+<main>
+<section class="hero wrap">
+<div class="eyebrow"><span class="dot"></span> Free · Browser-based · No account</div>
+<h1>Turn PDF pages into <span>beautiful images.</span></h1>
+<p>Convert PDF documents into JPG, PNG or WEBP in a few clicks. Your selected file is processed locally in your browser and is not sent to our server by this page.</p>
+<div class="tool" id="converter">
+<div class="drop" id="drop">
+<div class="uploadicon">📄</div><h2>Drop PDF files here</h2><p>or choose one or multiple PDF files from your device</p>
+<button class="primary" id="choose">Choose PDF file</button>
+<input id="file" type="file" accept="application/pdf,.pdf" multiple hidden>
+<div class="subtle">PDF only · For best results, use a modern browser</div>
+</div>
+<div class="settings">
+<div class="field"><label for="format">OUTPUT FORMAT</label><select id="format"><option value="jpeg">JPG</option><option value="png">PNG</option><option value="webp">WEBP</option></select></div>
+<div class="field"><label for="scale">IMAGE RESOLUTION</label><select id="scale"><option value="1">Standard (1×)</option><option value="1.5" selected>High (1.5×)</option><option value="2">Very high (2×)</option><option value="3">Ultra (3×)</option></select></div>
+<div class="field"><label for="quality">JPG / WEBP QUALITY</label><select id="quality"><option value=".7">70% · Smaller</option><option value=".82" selected>82% · Balanced</option><option value=".92">92% · Higher</option><option value="1">100% · Maximum</option></select></div>
+</div>
+<div class="actions"><div class="fileinfo" id="fileinfo">No PDF selected</div><button class="primary" id="convert" disabled>Convert PDF files to Images →</button></div>
+<div class="progress" id="progress"><div class="bar" id="bar"></div></div><div class="status" id="status" role="status" aria-live="polite"></div>
+<div class="actions" id="resultActions" hidden><div class="fileinfo" id="count"></div><div style="display:flex;gap:10px;flex-wrap:wrap"><button class="primary" id="downloadSeparate" type="button">Download all separately ↓</button><button class="primary" id="zip" type="button">Download all as ZIP ↓</button></div></div>
+<div class="results" id="results"></div>
+</div>
+</section>
+<section class="section wrap" id="features"><h2>Everything you need, without the clutter</h2><p class="lead">A straightforward PDF-to-image workflow with practical controls and privacy-conscious processing.</p><div class="cards">
+<div class="card"><div class="emoji">⚡</div><h3>Quick conversion</h3><p>Render each PDF page to an image directly in your browser. Progress is shown while pages are being processed.</p></div>
+<div class="card"><div class="emoji">🎛️</div><h3>Choose your output</h3><p>Select JPG, PNG or WEBP and adjust rendering scale. JPG and WEBP quality can be tuned for a balance of clarity and file size.</p></div>
+<div class="card"><div class="emoji">🔒</div><h3>Local processing</h3><p>This page uses browser-side libraries. It does not contain an upload endpoint or send your PDF to a conversion server.</p></div>
+<div class="card"><div class="emoji">📦</div><h3>Download together</h3><p>Save pages individually or package the converted images into one ZIP archive.</p></div>
+<div class="card"><div class="emoji">📱</div><h3>Responsive layout</h3><p>Use the converter on phones, tablets or desktop screens. The controls adapt to smaller displays.</p></div>
+<div class="card"><div class="emoji">🧭</div><h3>Simple controls</h3><p>No account or sign-up is required. Choose a file, set options, convert and save your results.</p></div>
+</div></section>
+<section class="section wrap" id="how"><h2>How to convert PDF to image</h2><p class="lead">Three simple steps from document to image files.</p><div class="steps">
+<div class="step"><div class="num">STEP 01</div><h3>Select a PDF</h3><p>Tap “Choose PDF file” or drag a PDF into the upload area. The file stays in your browser tab.</p></div>
+<div class="step"><div class="num">STEP 02</div><h3>Set your preferences</h3><p>Choose JPG, PNG or WEBP, then select a rendering scale. Higher scales create larger, more detailed images and need more memory.</p></div>
+<div class="step"><div class="num">STEP 03</div><h3>Convert and save</h3><p>Start conversion. Download individual pages or use the ZIP button to save all generated images together.</p></div>
+</div></section>
+<section class="section wrap" id="about"><h2>About PixelPDF Converter</h2><div class="prose">
+<p>PixelPDF Converter is a browser-based utility concept for people who need image versions of PDF pages. PDFs are useful for preserving document layout, but some workflows need a familiar image format: a page preview for a presentation, a visual reference for a class project, a page image for a design draft, or a picture that can be opened by an application that does not accept PDFs.</p>
+<p>The converter uses PDF.js to read and render document pages and JSZip to package output files. Rendering happens on the device using browser capabilities. No user account is needed. Because the work takes place in the browser, performance depends on the device, browser, PDF complexity, page count and chosen resolution.</p>
+<h3>Supported formats</h3><p>JPG is a compressed format commonly used for photographs and smaller files. PNG uses lossless compression and can preserve sharp text and line art, though files may be larger. WEBP is a modern image format that can provide compact files while retaining useful visual quality. The right choice depends on how you intend to use the image.</p>
+<h3>Resolution and quality</h3><p>The scale setting controls the rendered pixel dimensions relative to the PDF page's default rendering size. A higher scale can improve readability when zooming or printing, but it also increases memory use and output size. JPG and WEBP quality settings influence compression; PNG does not use the quality control. If a document has many pages, consider converting at standard or high scale first.</p>
+<h3>Practical limitations</h3><p>This tool converts pages, not editable text or PDF form fields. It does not perform OCR, repair damaged documents, remove passwords, or guarantee exact reproduction of every unusual font or annotation. Very large files can exceed the available memory of a phone or browser tab. If conversion fails, try a smaller PDF, a lower scale, or a desktop browser. Keep a separate copy of your original document.</p>
+<h3>Responsible use</h3><p>Only convert documents you have permission to use. Be careful when sharing images that contain personal, school, financial, workplace or other confidential information. The page is designed for local processing, but your browser, device, extensions, hosting provider, or any third-party scripts you choose to add may have separate privacy practices.</p>
+</div></section>
+<section class="section wrap" id="privacy"><h2>Privacy Policy</h2><div class="prose">
+<div class="notice"><strong>Plain-language summary:</strong> The conversion code in this file processes the selected PDF in your browser. It does not include a server upload feature, account system, or analytics tracker.</div>
+<h3>1. Information handled by the tool</h3><p>When you select a PDF, your browser provides the file to the page so that it can read and render its pages. The page uses the file contents in memory to create image outputs. The file name may be shown on screen and used to name downloads. The converter does not ask for your name, email address, phone number, account credentials or payment information.</p>
+<h3>2. Where processing happens</h3><p>PDF parsing and image rendering are performed on your device through the PDF.js library. ZIP creation is performed in the browser through JSZip. This HTML does not send the selected document or generated images to a dedicated conversion server. Closing or refreshing the page generally clears the page's in-memory working data, although downloaded files remain wherever your device saves them.</p>
+<h3>3. Third-party libraries</h3><p>This standalone version loads PDF.js and JSZip from public content-delivery networks. When your browser fetches those library files, the CDN may receive ordinary connection information such as IP address, request time, browser details and requested resource. The CDN's own policies govern that network request. For a stricter offline setup, download and host trusted copies of the libraries yourself, then update the script URLs in the HTML.</p>
+<h3>4. Cookies, tracking and accounts</h3><p>The supplied page does not intentionally set cookies, use advertising trackers, create user profiles, or require registration. If you publish it inside another website, that website or its hosting platform may use its own cookies, analytics, logs or other technologies. Review those services separately and disclose them where required.</p>
+<h3>5. Data retention</h3><p>The converter does not maintain a document database. Files selected for conversion are held by the active browser page while the conversion runs. Your browser may manage memory and temporary data according to its own behavior. Files you choose to download are stored by your device or browser download manager and are subject to your device's settings.</p>
+<h3>6. Sensitive documents</h3><p>Local processing reduces the need to transmit documents to a conversion service, but it is not a guarantee of absolute security. Use a trusted, updated device and browser. Avoid public or shared devices for confidential documents. Check browser extensions and device access, and do not share resulting images unless you intend to disclose their contents.</p>
+<h3>7. Children's privacy</h3><p>This utility does not request personal information from children. A parent, guardian, teacher or responsible adult should help younger users understand which documents are appropriate to convert and share.</p>
+<h3>8. Your choices</h3><p>You choose whether to select a file, which output format and resolution to use, and whether to download the results. You can leave the page without converting. If you publish a customized version that adds analytics, accounts, cloud storage or uploads, update this policy to describe those features accurately.</p>
+<h3>9. Changes to this policy</h3><p>This policy describes the behavior of the HTML supplied here. If the code, libraries, hosting setup or services change, the policy should be reviewed and updated. A website owner should add a date and contact information appropriate to their service before public deployment.</p>
+<h3>10. Contact and responsibility</h3><p>This is a reusable demo utility, not legal advice or a promise of compliance with every privacy law. If you operate it as a public service, provide a valid contact channel and seek appropriate legal review for your jurisdiction and use case.
+____
+
+Contact us:
+Website: PDF to Image Converter.ARnc
+Privacy / Support Email: subham99209114@gmail.com
+Contact no: 7544095688
+</p>
+</div></section>
+</main>
+<footer><div class="wrap foot"><span>© <span id="year"></span> PixelPDF Converter · Built for simple page conversion</span><span>PDFs are processed in your browser. Library files load from a CDN.</span></div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+(() => {
+'use strict';
+const $=id=>document.getElementById(id);
+const fileInput=$('file'),drop=$('drop'),choose=$('choose'),convert=$('convert'),status=$('status'),progress=$('progress'),bar=$('bar'),results=$('results'),resultActions=$('resultActions');
+let selectedFiles=[], outputs=[];
+$('year').textContent=new Date().getFullYear();
+if(window.pdfjsLib) pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+choose.addEventListener('click',()=>fileInput.click());
+fileInput.addEventListener('change',()=>setFiles(fileInput.files));
+function setFiles(fileList){
+ const files=Array.from(fileList||[]);
+ if(!files.length)return;
+ const invalid=files.filter(f=>f.type!=='application/pdf'&&!f.name.toLowerCase().endsWith('.pdf'));
+ if(invalid.length){status.textContent='Please select PDF files only.';return;}
+ selectedFiles=files; outputs=[];results.innerHTML='';resultActions.hidden=true;
+ $('fileinfo').textContent=files.length+' PDF file(s) selected · '+formatBytes(files.reduce((n,f)=>n+f.size,0));
+ convert.disabled=false;status.textContent='PDF files ready. Choose settings and convert.';
+}
+['dragenter','dragover'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add('drag')}));
+['dragleave','drop'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove('drag')}));
+drop.addEventListener('drop',e=>setFiles(e.dataTransfer.files));
+function formatBytes(n){if(n<1024)return n+' B';if(n<1048576)return (n/1024).toFixed(1)+' KB';return (n/1048576).toFixed(2)+' MB'}
+function safeName(name){return name.replace(/\.pdf$/i,'').replace(/[^\w.-]+/g,'_').slice(0,80)||'page'}
+convert.addEventListener('click',async()=>{
+ if(!selectedFiles.length)return;
+ if(!window.pdfjsLib){status.textContent='PDF library could not load. Check your internet connection and refresh.';return;}
+ convert.disabled=true;choose.disabled=true;outputs=[];results.innerHTML='';resultActions.hidden=true;progress.style.display='block';bar.style.width='0%';
+ try{
+  status.textContent='Reading PDF…';
+  const scale=Number($('scale').value),format=$('format').value,quality=Number($('quality').value);
+  let totalPages=0;
+  for(const f of selectedFiles){const data=await f.arrayBuffer();const doc=await pdfjsLib.getDocument({data:new Uint8Array(data)}).promise;totalPages+=doc.numPages;doc.destroy();}
+  let completed=0;
+  for(let fileIndex=0;fileIndex<selectedFiles.length;fileIndex++){
+   const source=selectedFiles[fileIndex];
+   status.textContent=`Opening PDF ${fileIndex+1} of ${selectedFiles.length}: ${source.name}`;
+   const bytes=await source.arrayBuffer();
+   const pdf=await pdfjsLib.getDocument({data:new Uint8Array(bytes)}).promise;
+   for(let pageNo=1;pageNo<=pdf.numPages;pageNo++){
+   status.textContent=`Converting PDF ${fileIndex+1}/${selectedFiles.length}, page ${pageNo}/${pdf.numPages}…`;
+   const page=await pdf.getPage(pageNo),viewport=page.getViewport({scale});
+   const canvas=document.createElement('canvas'),ctx=canvas.getContext('2d',{alpha:false});
+   canvas.width=Math.ceil(viewport.width);canvas.height=Math.ceil(viewport.height);
+   ctx.fillStyle='#fff';ctx.fillRect(0,0,canvas.width,canvas.height);
+   await page.render({canvasContext:ctx,viewport}).promise;
+   const mime=format==='jpeg'?'image/jpeg':format==='png'?'image/png':'image/webp';
+   const blob=await new Promise(resolve=>canvas.toBlob(resolve,mime,quality));
+   if(!blob)throw new Error('Your browser could not create this image format.');
+   const ext=format==='jpeg'?'jpg':format;
+   const name=`${safeName(source.name)}_page_${String(pageNo).padStart(3,'0')}.${ext}`;
+   outputs.push({name,blob,url:URL.createObjectURL(blob)});
+   const card=document.createElement('div');card.className='thumb';
+   const img=document.createElement('img');img.alt=`Preview of page ${pageNo}`;img.src=outputs[outputs.length-1].url;
+   const label=document.createElement('div');label.className='name';label.textContent=`${source.name} · Page ${pageNo} · ${formatBytes(blob.size)}`;
+   const a=document.createElement('a');a.className='download';a.href=outputs[outputs.length-1].url;a.download=name;a.textContent='Download image ↓';
+   card.append(img,label,a);results.append(card);
+   completed++;bar.style.width=(completed/totalPages*100)+'%';
+   page.cleanup();canvas.width=canvas.height=0;
+   }
+   await pdf.destroy();
+  }
+  resultActions.hidden=false;$('count').textContent=`Done · ${selectedFiles.length} PDF(s), ${outputs.length} image(s) created`;
+  status.textContent='Conversion complete. Download pages individually or as a ZIP.';
+ }catch(err){console.error(err);status.textContent='Conversion stopped: '+(err&&err.message?err.message:'Unable to process this PDF.');}
+ finally{convert.disabled=!selectedFiles.length;choose.disabled=false;}
+});
+$('downloadSeparate').addEventListener('click',async()=>{
+ if(!outputs.length)return;
+ const btn=$('downloadSeparate');btn.disabled=true;
+ try{
+  status.textContent='Starting individual downloads… If your browser asks, allow multiple downloads.';
+  for(let i=0;i<outputs.length;i++){
+   const a=document.createElement('a');a.href=outputs[i].url;a.download=outputs[i].name;
+   document.body.appendChild(a);a.click();a.remove();
+   status.textContent=`Download started: ${i+1} of ${outputs.length}`;
+   // A short pause helps browsers process each download separately.
+   await new Promise(resolve=>setTimeout(resolve,350));
+  }
+  status.textContent='All individual downloads have been started. Check your Downloads folder.';
+ }catch(e){status.textContent='Could not start downloads: '+e.message;}
+ finally{btn.disabled=false;}
+});
+
+$('zip').addEventListener('click',async()=>{
+ if(!outputs.length)return;
+ if(!window.JSZip){status.textContent='ZIP library could not load. You can download pages one by one.';return;}
+ const btn=$('zip');btn.disabled=true;status.textContent='Preparing ZIP…';
+ try{const zip=new JSZip();outputs.forEach(o=>zip.file(o.name,o.blob));const blob=await zip.generateAsync({type:'blob'},meta=>{bar.style.width=meta.percent+'%';});
+ const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=(selectedFiles.length===1?safeName(selectedFiles[0].name):'converted_pdfs')+'_images.zip';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);status.textContent='ZIP is ready. Check your downloads.';
+ }catch(e){status.textContent='Could not create ZIP: '+e.message;}finally{btn.disabled=false;}
+});
+
+window.addEventListener('beforeunload',()=>outputs.forEach(o=>URL.revokeObjectURL(o.url)));
+})();
+</script>
+</body>
+</html>
